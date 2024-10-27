@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black; /* Black background */
+            color: white; /* White text color */
+            text-align: center; /* Center text alignment */
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        @keyframes achievementAnimation {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.1);}
+            100% {transform: scale(1);}
+        }
+        .achievement {
+            animation: achievementAnimation 2s ease-in-out forwards;
+            font-size: 36px; /* Larger font size for the achievement */
+            margin-bottom: 20px; /* Space below the achievement text */
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.7); /* Gold shadow effect */
+        }
+        p {
+            font-size: 18px; /* Slightly larger font size for the paragraph */
+            margin-bottom: 20px; /* Space below the paragraph */
+        }
+        a {
+            font-size: 20px; /* Font size for the link */
+            color: #FFD700; /* Gold color for the link */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 20px; /* Padding around the link */
+            border: 2px solid #FFD700; /* Gold border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+        }
+        a:hover {
+            background-color: #FFD700; /* Gold background on hover */
+            color: black; /* Black text on hover */
+        }
+        /* Falling stars animation */
+        .star {
+            position: absolute;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700; /* Gold color for stars */
+            border-radius: 50%; /* Make stars circular */
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="achievement">Achievement Unlocked!</h1>
+    <p>To download your certificate, click the link below:</p>
+    <a href="https://drive.google.com/file/d/1M9QMlT3TM3ovz0hPNdQPp0pJcAUIpn9c/view?usp=sharing" target="_blank">Download Certificate</a>
+
+    <!-- Stars -->
+    <div class="star" style="left: 10%; animation-duration: 3s; animation-delay: 0s;"></div>
+    <div class="star" style="left: 20%; animation-duration: 4s; animation-delay: 1s;"></div>
+    <div class="star" style="left: 30%; animation-duration: 5s; animation-delay: 2s;"></div>
+    <div class="star" style="left: 40%; animation-duration: 3.5s; animation-delay: 0.5s;"></div>
+    <div class="star" style="left: 50%; animation-duration: 4.5s; animation-delay: 1.5s;"></div>
+    <div class="star" style="left: 60%; animation-duration: 3s; animation-delay: 0s;"></div>
+    <div class="star" style="left: 70%; animation-duration: 4s; animation-delay: 1s;"></div>
+    <div class="star" style="left: 80%; animation-duration: 5s; animation-delay: 2s;"></div>
+    <div class="star" style="left: 90%; animation-duration: 3.5s; animation-delay: 0.5s;"></div>
+</body>
+</html>
